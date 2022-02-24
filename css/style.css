@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #202020;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo {
+    width: 460px;
+}
+
+.todo__title {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.todo__add {
+    position: relative;
+}
+
+.todo__add-input {
+    padding: 12px 30px 12px 12px;
+    width: 100%;
+    border: 1px solid #989898;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 8px;
+}
+
+.todo__add-input::placeholder {
+    color: #bbbbbb;
+}
+
+.todo__add-btn,
+.todo__list-closebtn {
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    border: none;
+}
+
+.todo__add-btn {
+    background-image: url('../img/add-icon.svg');
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+
+.todo__list-closebtn {
+    background-image: url('../img/del-icon.svg');
+    background-color: transparent;
+    width: 17px;
+    height: 16px;
+}
+
+.todo__list-item {
+    border: 1px solid #989898;
+    border-radius: 6px;
+    padding: 12px 45px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.todo__list-item:last-child {
+    margin-bottom: 12px;
+}
+
+.todo__list-item--done {
+    background: #f4f4f4;
+}
+
+.todo__list-checkbox {
+    display: none;
+}
+
+.todo__checkbox-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #998899;
+    background: #fff;
+    top: 12px;
+    left: 12px;
+    cursor: pointer;
+}
+
+.todo__list-checkbox:checked + .todo__checkbox-style::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c4c4c4;
+}
+
+.todo__item-text {
+    display: inline;
+}

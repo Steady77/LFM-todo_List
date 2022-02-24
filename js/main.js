@@ -1,14 +1,4 @@
-import { UI_ELEMS } from './view.js';
-
-const STATUS = {
-    TO_DO: 'To Do',
-    DONE: 'Done',
-};
-
-const PRIORITY = {
-    LOW: 'low',
-    HIGH: 'high',
-};
+import { UI_ELEMS, PRIORITY, STATUS, createHTML } from './view.js';
 
 const DEFAULT_STATUS = STATUS.TO_DO,
     DEFAULT_PRIORITY = PRIORITY.HIGH;
@@ -77,21 +67,6 @@ function filterTaskList() {
     const filteredByLow = list.filter(item => item.priority === PRIORITY.LOW);
 
     list = filteredByHigh.concat(filteredByLow);
-}
-
-function createHTML(task) {
-    return `
-        <li class="todo__list-item ${task.status === STATUS.DONE ? 'todo__list-item--done' : ''}">
-            <label class="todo__list-label">
-                <input class="todo__list-checkbox" type="checkbox" ${task.status === STATUS.DONE ? 'checked' : ''}>
-                <span class="todo__checkbox-style"></span>
-            </label>
-            <p class="todo__item-text">
-                ${task.name}
-            </p>
-            <button class="todo__list-closebtn"></button>
-        </li>
-    `;
 }
 
 function renderTaskList() {

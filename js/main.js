@@ -95,17 +95,23 @@ UI_ELEMS.FORMS.forEach((form, i) => {
         const target = event.target;
         const taskText = UI_ELEMS.TASK_INPUTS[i].value;
 
-        if (taskText) {
-            if (target.classList.contains('todo__add-high')) {
-                addTask(taskText);
-            }
+        try {
+            if (taskText && taskText.trim() !== '') {
+                if (target.classList.contains('todo__add-high')) {
+                    addTask(taskText);
+                }
 
-            if (target.classList.contains('todo__add-low')) {
-                addTask(taskText, STATUS.TO_DO, PRIORITY.LOW);
-            }
+                if (target.classList.contains('todo__add-low')) {
+                    addTask(taskText, STATUS.TO_DO, PRIORITY.LOW);
+                }
 
-            UI_ELEMS.TASK_INPUTS[i].value = '';
-            renderTaskList();
+                UI_ELEMS.TASK_INPUTS[i].value = '';
+                renderTaskList();
+            } else {
+                throw 'Введите текст задачи';
+            }
+        } catch (err) {
+            alert(err);
         }
     });
 });

@@ -1,0 +1,22 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steady77/LFM-todo_List.git"
+  },
+  "keywords": [
+    "todo_list"
+  ],
+  "author": "Steady",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steady77/LFM-todo_List/issues"
+  },
+  "homepage": "https://github.com/Steady77/LFM-todo_List#readme"
+}

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Steady77/LFM-todo_List/issues"
   },
-  "homepage": "https://github.com/Steady77/LFM-todo_List#readme"
+  "homepage": "https://github.com/Steady77/LFM-todo_List#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
 }
